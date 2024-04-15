@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fffffe;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Evita rolagem horizontal no corpo inteiro */
+}
+
+h1{
+  padding-top: 20px;
+  text-align: center;
+}
+img {
+  width: 150px;
+  height: 220px;
+  border-radius: 47%;
+}
+
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  height: 660px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 24px;
+  border-radius: 8px;
+  margin: 2rem auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.card-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Opera */
+}
+.card-container.active {
+  cursor: grabbing;
+}
+
+.card {
+  flex: 0 0 auto; /* Permite que os cartões tenham largura própria e não preencham todo o espaço */
+  width: 250px; /* Define uma largura padrão para cada cartão */
+  padding: 24px;
+  border-radius: 8px;
+  scroll-snap-align: start;
+  background-color: rgba(161, 221, 245, 0.747);
+  text-align: center;
+  margin-right: 20px; /* Espaço entre os cartões */
+}
+
+.card-content {
+  color: rgb(58, 57, 57);
+  text-align: left;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  z-index: 1; /* Ajustado para estar acima do background */
+  padding-top: 0px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.button {
+  position: relative;
+  margin-bottom: 0px;
+  width: 120px;
+  height: 30px;
+  font-size: smaller;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+}
+
+input.button:hover {
+  position: relative;
+  margin-bottom: 0px;
+  width: 130px;
+  height: 33px;
+  font-size: smaller;
+  background-color: rgb(12, 62, 226);
+  border: none;
+  border-radius: 5px;
+}
+
+  

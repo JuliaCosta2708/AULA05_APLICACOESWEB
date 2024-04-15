@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoção de cães</title>
+    <link rel="stylesheet" href="style01.css">
+</head>
+<body>
+    <h1>ADOÇÃO DE CÃES</h1>
+            <div class="card-container"> <!--Div para todos os cães-->
+                <!-- Card 1 -->
+                <div class="card"> <!--card de fora de 1 animal-->
+                  <h1 class="card-header">Pandora</h1>
+                  <img src="../Imagens/pandora.jpg" alt="Pandora">
+                  <div class="card-content">
+                    <div class="info">
+                      <h2 class="titulo">Idade:</h2> <p>1 ano</p>
+                    </div>
+                    <div class="info">
+                      <h2>Características:</h2>
+                      <ul>
+                        <li>Alegre e ativa</li>
+                        <li>Sociável com outros animais</li>
+                        <li>Precisa de muito espaço</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <footer class="card-footer">
+                    <button>ADOTAR PANDORA</button>
+                  </footer>
+                </div>
+                <!-- Repetir para outros cães... -->
+
+
+                <!--Ayrom-->
+                <div class="card"> <!--card de fora de 1 animal-->
+                  <h1 class="card-header">Ayron</h1>
+                  <img src="Imagens/ayron.jpg" alt="Ayron">
+                  <div class="card-content">
+                    <div class="info">
+                      <h2 class="titulo">Idade:</h2> <p>7 meses</p>
+                    </div>
+                    <div class="info">
+                      <h2>Características:</h2>
+                      <ul>
+                        <li>Carinhoso e companheiro</li>
+                        <li>Sociável com outros animais e crianças</li>
+                        <li>Gosta de estar perto dos humsnos</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <footer class="card-footer">
+                    <button>ADOTAR AYRON</button>
+                  </footer>
+                </div>
+            
+          <!--Maya Maria-->
+          <div class="card"> <!--card de fora de 1 animal-->
+            <h1 class="card-header">Maya</h1>
+            <img src="Imagens/maya.jpeg" alt="Pandora">
+            <div class="card-content">
+              <div class="info">
+                <h2 class="titulo">Idade:</h2> <p>1 ano</p>
+              </div>
+              <div class="info">
+                <h2>Características:</h2>
+                <ul>
+                  <li>Alegre e bagunceira</li>
+                  <li>Sociável com outros animais</li>
+                  <li>Precisa de muito espaço e atenção</li>
+                </ul>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <button>ADOTAR MAYA MARIA</button>
+            </footer>
+          </div>
+
+          <!--bolt-->
+          <div class="card"> <!--card de fora de 1 animal-->
+            <h1 class="card-header">Bolt</h1>
+            <img src="Imagens/bolt.jpg" alt="Pandora">
+            <div class="card-content">
+              <div class="info">
+                <h2 class="titulo">Idade:</h2> <p>3 anos</p>
+              </div>
+              <div class="info">
+                <h2>Características:</h2>
+                <ul>
+                  <li>Alegre e obediente</li>
+                  <li>Gosta de ficar sozinho</li>
+                  <li>Não precisa de muito espaço e atenção</li>
+                </ul>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <button>ADOTAR BOLT</button>
+            </footer>
+          </div>
+
+          <!--JOÃO-->
+          <div class="card"> <!--card de fora de 1 animal-->
+            <h1 class="card-header">João</h1>
+            <img src="Imagens/joao.jpg" alt="Pandora">
+            <div class="card-content">
+              <div class="info">
+                <h2 class="titulo">Idade:</h2> <p>4 ano</p>
+              </div>
+              <div class="info">
+                <h2>Características:</h2>
+                <ul>
+                  <li>Quieto e companheiro</li>
+                  <li>Sociável com outros animais e humanos</li>
+                  <li>Gosta de brincar de bolinha</li>
+                </ul>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <button>ADOTAR João</button>
+            </footer>
+          </div>
+
+          <!--Maya Maria-->
+          <div class="card"> <!--card de fora de 1 animal-->
+            <h1 class="card-header">Cristina</h1>
+            <img src="Imagens/cristina.jpg" alt="Pandora">
+            <div class="card-content">
+              <div class="info">
+                <h2 class="titulo">Idade:</h2> <p>1 ano</p>
+              </div>
+              <div class="info">
+                <h2>Características:</h2>
+                <ul>
+                  <li>Brincalhona e dócil</li>
+                  <li>Gosta de passeios e aventuras</li>
+                  <li>Adora dormir</li>
+                </ul>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <input type="button" class="button">ADOTAR Cristina</input>
+            </footer>
+          </div>
+
+
+
+          </div>
+
+
+          <script>
+            const slider = document.querySelector('.card-container');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+        
+            slider.addEventListener('mousedown', (e) => {
+                isDown = true;
+                slider.classList.add('active');
+                startX = e.pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+            });
+        
+            slider.addEventListener('mouseleave', () => {
+                isDown = false;
+                slider.classList.remove('active');
+            });
+        
+            slider.addEventListener('mouseup', () => {
+                isDown = false;
+                slider.classList.remove('active');
+            });
+        
+            slider.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - slider.offsetLeft;
+                const walk = (x - startX) * 3; // o fator 3 aumenta a velocidade do scroll
+                slider.scrollLeft = scrollLeft - walk;
+            });
+        </script>
+        
+</body>
+</html>
